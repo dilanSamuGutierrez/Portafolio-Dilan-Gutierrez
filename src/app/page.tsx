@@ -8,6 +8,7 @@ import Markdown from "react-markdown";
 import ContactSection from "@/components/section/contact-section";
 import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
+import WorkSectionPersonal from "@/components/section/work-section-personal";
 import { ArrowUpRight } from "lucide-react";
 import FloatingActions from "@/components/floating-actions";
 
@@ -72,6 +73,16 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
+      <section id="work-personal">
+        <div className="flex min-h-0 flex-col gap-y-6">
+          <BlurFade delay={BLUR_FADE_DELAY * 5}>
+            <h2 className="text-xl font-bold text-[#3e5b99] dark:text-[#F6E9B2]">Proyectos personales</h2>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 6}>
+            <WorkSectionPersonal />
+          </BlurFade>
+        </div>
+      </section>
       <section id="education">
         <div className="flex min-h-0 flex-col gap-y-6">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
@@ -121,37 +132,41 @@ export default function Page() {
         </div>
       </section>
       <section id="skills">
-        <div className="flex min-h-0 flex-col gap-y-4">
+        <div className="flex flex-col gap-y-6">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold text-[#3e5b99] dark:text-[#F6E9B2]">
               Skills
             </h2>
           </BlurFade>
 
-          <div className="flex flex-wrap gap-2">
-            {DATA.skills.map((skill, id) => (
-              <BlurFade key={skill.name} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <div className="
-                  border bg-background border-border ring-2 ring-border/20
-                  rounded-xl h-8 w-fit px-4 flex items-center gap-2
-                  transition-all duration-300 ease-in-out
-                  hover:text-[#3e5b99] dark:hover:text-[#F6E9B2]
-                  hover:ring-[#3e5b99]/40 dark:hover:ring-[#F6E9B2]/40
-                  hover:scale-105 hover:shadow-md cursor-pointer
-                ">
-                  
-                  {skill.icon && (
-                    <skill.icon className="size-4 object-contain" />
-                  )}
+          {Object.entries(DATA.skills).map(([category, skills], i) => (
+            <div key={category} className="flex flex-col gap-2">
+              <h3 className="text-sm font-semibold text-muted-foreground capitalize">
+                {category === "database" ? "Base de datos" :
+                category === "tools" ? "Herramientas" :
+                category === "extras" ? "Otros" :
+                category}
+              </h3>
 
-                  <span className="text-sm font-medium">
-                    {skill.name}
-                  </span>
-
-                </div>
-              </BlurFade>
-            ))}
-          </div>
+              <div className="flex flex-wrap gap-2">
+                {skills.map((skill, id) => (
+                  <BlurFade key={skill.name} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
+                    <div className="
+                      border bg-background border-border ring-2 ring-border/20
+                      rounded-xl h-8 w-fit px-4 flex items-center gap-2
+                      transition-all duration-300 ease-in-out
+                      hover:text-[#3e5b99] dark:hover:text-[#F6E9B2]
+                      hover:ring-[#3e5b99]/40 dark:hover:ring-[#F6E9B2]/40
+                      hover:scale-105 hover:shadow-md cursor-pointer
+                    ">
+                      {skill.icon && <skill.icon className="size-4" />}
+                      <span className="text-sm font-medium">{skill.name}</span>
+                    </div>
+                  </BlurFade>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
       <section id="projects">

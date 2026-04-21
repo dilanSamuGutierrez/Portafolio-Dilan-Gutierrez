@@ -18,78 +18,62 @@ export const DATA = {
   location: "Bogotá D.C, Colombia",
   locationLink: "https://www.google.com/maps/place/bogota",
   description:
-    "Desarrollador web con enfoque en construir aplicaciones funcionales, escalables y orientadas a resolver problemas reales.",
+    "Desarrollador Full Stack enfocado en construir aplicaciones web funcionales, escalables y orientadas a resolver problemas reales.",
   summary:
-    "Soy desarrollador web con experiencia en la construcción de aplicaciones y soluciones digitales utilizando tecnologías como PHP, Java, JavaScript, React y Next.js.\n\nHe trabajado en el desarrollo de sistemas web, ecommerce y landing pages, integrando tanto frontend como backend, manejo de bases de datos y lógica de negocio.\n\nTengo experiencia estructurando proyectos, organizando código y desarrollando funcionalidades que responden a necesidades reales, no solo desde lo técnico sino también entendiendo el impacto en el negocio.\n\nActualmente estoy enfocado en fortalecer mis habilidades en desarrollo full stack, arquitectura de software y automatización, construyendo proyectos cada vez más completos, escalables y orientados a resolver problemas concretos.",
-  skills: [
-    { name: "JavaScript", icon: Typescript },
-    {
-      name: "PHP",
-      icon: () => (
-        <img
-          src="https://cdn.simpleicons.org/php/777BB4"
-          alt="PHP"
-          className="w-5 h-5 object-contain"
-        />
-      ),
-    },
-    { name: "Python", icon: Python },
-    { name: "Java", icon: Java },
-    { name: "SQL", icon: Database },
+  "Soy desarrollador web con experiencia en la creación de aplicaciones, ecommerce y sistemas internos utilizando tecnologías como React, Next.js, Node.js y Laravel.\n\nHe trabajado en el desarrollo de soluciones digitales que optimizan procesos, mejoran la experiencia del usuario y aportan valor a nivel funcional y técnico dentro de los proyectos.\n\nTengo experiencia construyendo tanto frontend como backend, estructurando proyectos, organizando código y desarrollando funcionalidades basadas en requerimientos reales.\n\nHe participado en el desarrollo de interfaces claras y sistemas que facilitan la interacción del usuario, priorizando la usabilidad y el rendimiento.\n\nMe enfoco en desarrollar soluciones cada vez más estructuradas y escalables, aplicando buenas prácticas de desarrollo y arquitectura de software.",
+  skills: {
+    frontend: [
+      { name: "JavaScript", icon: Typescript },
+      { name: "React", icon: ReactLight },
+      { name: "Next.js", icon: NextjsIconDark },
+      {
+        name: "Tailwind CSS",
+        icon: () => (
+          <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" className="w-5 h-5" />
+        ),
+      },
+    ],
 
-    { name: "React", icon: ReactLight },
-    { name: "Next.js", icon: NextjsIconDark },
-    {
-      name: "Laravel",
-      icon: () => (
-        <img
-          src="https://cdn.simpleicons.org/laravel/FF2D20"
-          alt="Laravel"
-          className="w-5 h-5 object-contain"
-        />
-      ),
-    },
-    {
-      name: "Express",
-      icon: () => (
-        <img
-          src="https://cdn.simpleicons.org/express/000000"
-          alt="Express"
-          className="w-5 h-5 object-contain"
-        />
-      ),
-    },
-    {
-      name: "Spring Boot",
-      icon: () => (
-        <img
-          src="https://cdn.simpleicons.org/springboot/6DB33F"
-          alt="Spring Boot"
-          className="w-5 h-5 object-contain"
-        />
-      ),
-    },
+    backend: [
+      { name: "Node.js", icon: Nodejs },
+      {
+        name: "Express",
+        icon: () => (
+          <img src="https://cdn.simpleicons.org/express/000000" className="w-5 h-5" />
+        ),
+      },
+      {
+        name: "Laravel",
+        icon: () => (
+          <img src="https://cdn.simpleicons.org/laravel/FF2D20" className="w-5 h-5" />
+        ),
+      },
+      {
+        name: "Spring Boot",
+        icon: () => (
+          <img src="https://cdn.simpleicons.org/springboot/6DB33F" className="w-5 h-5" />
+        ),
+      },
+      { name: "PHP", icon: () => (<img src="https://cdn.simpleicons.org/php/777BB4" className="w-5 h-5" />) },
+      { name: "Java", icon: Java },
+    ],
 
-    { name: "Node.js", icon: Nodejs },
-    { name: "PostgreSQL", icon: Postgresql },
-    { name: "Git", icon: GitBranch },
-    { name: "GitHub", icon: Github },
-    {
-      name: "Tailwind CSS",
-      icon: () => (
-        <img
-          src="https://cdn.simpleicons.org/tailwindcss/06B6D4"
-          alt="Tailwind CSS"
-          className="w-5 h-5 object-contain"
-        />
-      ),
-    },
+    database: [
+      { name: "SQL", icon: Database },
+      { name: "PostgreSQL", icon: Postgresql },
+    ],
 
-    // 🔹 Extras que te diferencian
-    { name: "SEO", icon: Globe },
-    { name: "UI/UX", icon: PenTool },
-    { name: "Automatización", icon: Bot },
-  ],
+    tools: [
+      { name: "Git", icon: GitBranch },
+      { name: "GitHub", icon: Github },
+    ],
+
+    extras: [
+      { name: "SEO", icon: Globe },
+      { name: "UI/UX", icon: PenTool },
+      { name: "Automatización", icon: Bot },
+    ],
+  },
   navbar: [
     { href: "/", icon: HomeIcon, label: "Inicio" },
   ],
@@ -121,6 +105,21 @@ export const DATA = {
 
   work: [
     {
+      company: "Pontificia Universidad Javeriana",
+      href: "",
+      badges: ["Prácticas"],
+      location: "Bogotá, Colombia",
+      title: "Practicante en Análisis y Desarrollo de Software",
+      logoUrl: "/javeriana.jpg",
+      start: "Mar 2025",
+      end: "Sep 2025 (6 meses)",
+      description:
+        "Participé en el desarrollo de un sistema interno para la gestión de inventario de equipos tecnológicos, enfocado en mejorar la organización, control y trazabilidad de los activos. Implementé funcionalidades como registro, actualización, consulta y seguimiento de equipos, optimizando procesos y reduciendo errores manuales. Además, apoyé en el levantamiento de información e inventariado físico, y brindé soporte técnico en punto de atención al cliente, incluyendo instalación de software, configuración de equipos y resolución de incidencias. Tuve interacción directa con usuarios para entender sus necesidades y traducirlas en soluciones tecnológicas funcionales.",
+    },
+  ],
+
+  workpersonal: [
+    {
       company: "Ekimedicall MP",
       href: "https://www.ekimedicall.com",
       badges: ["Proyecto real"],
@@ -130,19 +129,7 @@ export const DATA = {
       start: "Nov 2024",
       end: "Mar 2025",
       description:
-        "Desarrollé un ecommerce completo para el sector salud utilizando Laravel, enfocado en la gestión de productos, pedidos y experiencia del usuario.\n\nImplementé funcionalidades clave como catálogo dinámico de productos, carrito de compras, sistema de pedidos y estructura backend para administración de contenido.\n\nTrabajé en la integración entre frontend y backend, manejo de base de datos y lógica de negocio, asegurando una plataforma funcional, escalable y orientada a conversión.\n\nAdemás, optimicé la estructura del sitio para mejorar rendimiento, organización del código y experiencia del usuario final.",
-    },
-    {
-      company: "Pontificia Universidad Javeriana",
-      href: "",
-      badges: ["Prácticas"],
-      location: "Bogotá, Colombia",
-      title: "Practicante en Análisis y Desarrollo de Software",
-      logoUrl: "/javeriana.jpg",
-      start: "Mar 2025",
-      end: "Sep 2025",
-      description:
-        "Desarrollé un software interno para la gestión de inventario de equipos tecnológicos, permitiendo el registro, actualización y consulta de activos.\n\nImplementé interfaces intuitivas y funcionalidades que mejoraron la trazabilidad de los equipos y optimizaron los procesos administrativos internos.\n\nTrabajé con tecnologías como React y Express para la construcción del sistema, integrando frontend y backend.\n\nAdicionalmente, brindé soporte técnico en sitio, apoyando en la resolución de incidencias y mantenimiento de equipos dentro de la institución.",
+        "Desarrollé un sitio web para el sector salud enfocado en la presentación de servicios médicos, con una estructura orientada a la captación de usuarios.\n\nTrabajé en la organización de la información, experiencia de usuario y diseño adaptable a dispositivos móviles, asegurando una navegación clara, funcional y accesible.\n\nImplementé la estructura general del sistema integrando frontend y backend, manejo de datos y lógica de negocio, garantizando un funcionamiento estable y escalable.",
     },
     {
       company: "Travel One AXM",
@@ -154,10 +141,46 @@ export const DATA = {
       start: "Ene 2026",
       end: "Feb 2026",
       description:
-        "Desarrollé una plataforma web para una agencia de viajes, enfocada en la gestión de planes turísticos y la interacción con clientes.\n\nImplementé un sistema de administración para crear, editar y eliminar planes y categorías, permitiendo una gestión dinámica del contenido.\n\nDesarrollé funcionalidades para la recepción de mensajes de usuarios interesados, facilitando el contacto directo con potenciales clientes.\n\nTrabajé en la estructura general del sistema, integrando frontend y backend, manejo de datos y lógica de negocio para asegurar una plataforma funcional y fácil de usar.",
+        "Desarrollé una landing page para una agencia de viajes, enfocada en la captación de clientes para servicios turísticos.\n\nImplementé una estructura estratégica con secciones orientadas a generar confianza, destacar beneficios y facilitar el contacto directo con usuarios interesados.\n\nOptimicé la organización del contenido y la experiencia de usuario, priorizando una navegación clara, rápida y adaptable a dispositivos móviles.",
     },
-    
+    {
+      company: "Nuevo Estilo Dance",
+      badges: ["Proyecto real"],
+      href: "https://www.nuevoestilodance.com/",
+      location: "Cali, Colombia",
+      title: "Desarrollador Web",
+      logoUrl: "/LogoNED.png",
+      start: "Mar 2026",
+      end: "Mar 2026",
+      description:
+        "Desarrollé el sitio web para una academia de baile reconocida en Cali, enfocado en comunicar sus líneas de formación y fortalecer su presencia digital.\n\nEstructuré secciones para presentar programas, metodologías y servicios, facilitando la comprensión de la oferta y mejorando la captación de nuevos estudiantes.\n\nOptimicé la experiencia de usuario y la accesibilidad desde dispositivos móviles.",
+    },
+    {
+      company: "Freestyle Dance Cali",
+      badges: ["Proyecto real"],
+      href: "https://www.freestyledancecali.com/",
+      location: "Cali, Colombia",
+      title: "Desarrollador Web",
+      logoUrl: "/LogoFTD.png",
+      start: "Mar 2026",
+      end: "Mar 2026",
+      description:
+        "Creé el sitio web para una academia de baile en Cali, enfocado en mejorar la comunicación de sus servicios y facilitar el acceso a información clave.\n\nOrganicé el contenido incluyendo clases, horarios y contacto, priorizando una navegación clara y una experiencia de usuario optimizada.\n\nDesarrollé una estructura adaptable a dispositivos móviles, mejorando la accesibilidad del sitio.",
+    },
+    {
+      company: "Smart Learning Online",
+      badges: ["Proyecto real"],
+      href: "https://www.smartlearningonline.com/",
+      location: "Remoto",
+      title: "Desarrollador Web",
+      logoUrl: "/LogoSMT.webp",
+      start: "Abr 2026",
+      end: "Abr 2026",
+      description:
+        "Desarrollé un sitio web enfocado en la promoción de cursos de inglés, certificaciones y procesos de validación de bachillerato.\n\nDiseñé una estructura clara para comunicar cada servicio, facilitando la comprensión de la oferta educativa y el acceso a la información.\n\nOptimicé la experiencia de usuario y el flujo de navegación para mejorar la interacción de los usuarios y el contacto con potenciales estudiantes.",
+    },
   ],
+
   education: [
     {
       school: "Universidad UNINPAHU",
@@ -192,21 +215,16 @@ export const DATA = {
       end: "2023",
     },
   ],
+
   projects: [
     {
-      title: "E-Commerce - Ekimedicall",
+      title: "Ekimedicall — Plataforma web sector salud",
       href: "https://ekimedicall.com/",
       dates: "Nov 2024 - Mar 2025",
       active: true,
       description:
-        "Desarrollé un E-Commerce personalizado para Ekimedicall, una empresa especializada en productos médicos. El sitio web incluye una interfaz intuitiva para la gestión de productos, un carrito de compras dinámico, opciones de pago seguras y una experiencia de usuario optimizada.",
-      technologies: [
-        "Laravel",
-        "JavaScript",
-        "SQL",
-        "Html",
-        "CSS",
-      ],
+        "Desarrollo de sitio web para el sector salud enfocado en la presentación de servicios médicos. Se optimizó la organización de la información, experiencia de usuario y diseño adaptable, logrando una navegación clara, funcional y orientada a la captación de usuarios.",
+      technologies: ["React", "Next.js", "Node.js", "SQL", "Tailwind CSS"],
       links: [
         {
           type: "Sitio Web",
@@ -215,23 +233,16 @@ export const DATA = {
         },
       ],
       image: "/projects/eki_Img.PNG",
-      video:
-        "",
+      video: "",
     },
     {
-      title: "Travel One AXM",
+      title: "Travel One AXM — Landing page turística",
       href: "https://traveloneaxm.com/",
-      dates: "Enero 2026 - Febrero 2026",
+      dates: "Ene 2026 - Feb 2026",
       active: true,
       description:
-        "Desarrollo de sitio web para agencia de viajes Laravel, optimizado para captar clientes y transmitir confianza en servicios turísticos desde el primer vistazo.",
-      technologies: [
-        "Laravel",
-        "JavaScript",
-        "SQL",
-        "Html",
-        "CSS",
-      ],
+        "Desarrollo de landing page para agencia de viajes enfocada en la captación de clientes. Se implementó una estructura estratégica orientada a generar confianza, destacar beneficios y facilitar el contacto con usuarios interesados.",
+      technologies: ["Laravel", "JavaScript", "SQL", "HTML", "CSS"],
       links: [
         {
           type: "Sitio Web",
@@ -240,6 +251,60 @@ export const DATA = {
         },
       ],
       image: "/projects/travel_Img.png",
+      video: "",
+    },
+    {
+      title: "Nuevo Estilo Dance — Sitio web institucional",
+      href: "https://www.nuevoestilodance.com/",
+      dates: "Mar 2026",
+      active: true,
+      description:
+        "Desarrollo de sitio web para academia de baile en Cali, enfocado en comunicar sus programas y fortalecer su presencia digital. Se estructuró la información para mejorar la comprensión de los servicios y la captación de estudiantes.",
+      technologies: ["React", "Next.js", "Tailwind CSS"],
+      links: [
+        {
+          type: "Sitio Web",
+          href: "https://www.nuevoestilodance.com/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/projects/exampleNed.webp",
+      video: "",
+    },
+    {
+      title: "Freestyle Dance Cali — Sitio web institucional",
+      href: "https://www.freestyledancecali.com/",
+      dates: "Mar 2026",
+      active: true,
+      description:
+        "Creación de sitio web para academia de baile enfocado en mejorar la comunicación de servicios y acceso a información clave. Se optimizó la navegación y la estructura del contenido para una mejor experiencia de usuario.",
+      technologies: ["React", "Next.js", "Tailwind CSS"],
+      links: [
+        {
+          type: "Sitio Web",
+          href: "https://www.freestyledancecali.com/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/projects/exampleFtd.webp",
+      video: "",
+    },
+    {
+      title: "Smart Learning Online — Plataforma educativa",
+      href: "https://www.smartlearningonline.com/",
+      dates: "Abr 2026",
+      active: true,
+      description:
+        "Desarrollo de sitio web para promoción de cursos de inglés, certificaciones y validación de bachillerato. Se diseñó una estructura clara para comunicar servicios y mejorar la interacción de usuarios.",
+      technologies: ["React", "Next.js", "Node.js"],
+      links: [
+        {
+          type: "Sitio Web",
+          href: "https://www.smartlearningonline.com/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/projects/exampleSTR.webp",
       video: "",
     },
   ],
