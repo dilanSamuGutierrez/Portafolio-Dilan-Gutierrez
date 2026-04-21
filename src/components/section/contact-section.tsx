@@ -34,8 +34,7 @@ export default function ContactSection() {
         <p className="mx-auto max-w-lg text-muted-foreground text-balance">
           Soy desarrollador enfocado en crear soluciones web modernas, funcionales
           y bien estructuradas. Estoy abierto a oportunidades laborales donde
-          pueda aportar, aprender y crecer profesionalmente. Si crees que puedo
-          encajar en tu equipo, no dudes en contactarme.
+          pueda aportar, aprender y crecer profesionalmente. Si buscas un desarrollador que pueda aportar desde el inicio, estaré encantado de formar parte de tu equipo.
         </p>
 
         {/* Button */}
